@@ -341,6 +341,19 @@ header .go-back i {
     line-height: 56px;
 }
 
+.workexp-cover {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 60vh;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    background-position: center center;
+    background-size: cover;
+    transform: translate3d(0px, 0px, 0px);
+}
+
 /* 背景图效果. */
 .bg-cover {
     position: relative;
@@ -768,6 +781,16 @@ article .article-tags .chip {
     box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15),
     0 5px 15px rgba(0, 0, 0, .07),
     0 2px 5px -5px rgba(0, 0, 0, .1) !important;
+}
+
+#artDetail .card .title {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+#artDetail .card .description {
+    font-size: 1.2rem;
+    color: #999;
 }
 
 #artDetail .tag-cate {
@@ -1442,8 +1465,12 @@ table tr:nth-child(2n), thead {
     text-align: left;
 }
 
-.underline:hover {
-    text-decoration: underline;
+.workexp-block {
+    transition: transform .2s;
+}
+
+.workexp-block:hover {
+    transform: scale(1.15);
 }
 
 .my-projects .info {
