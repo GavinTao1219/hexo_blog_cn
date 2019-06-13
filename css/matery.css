@@ -472,6 +472,11 @@ header .go-back i {
     font-size: 1.1rem;
 }
 
+.dream .text2 {
+    opacity: .6;
+    font-size: 1.3rem;
+}
+
 .music-player,
 .video-player {
     margin-top: 10px;
