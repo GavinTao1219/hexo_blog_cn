@@ -381,6 +381,11 @@ header .go-back i {
     animation: rainbow 60s infinite;
 }
 
+.post-cover:after {
+    -webkit-animation: darker-rainbow 60s infinite;
+    animation: darker-rainbow 60s infinite;
+}
+
 .bg-cover:before, .bg-cover:after {
     position: absolute;
     z-index: 1;
@@ -434,6 +439,26 @@ header .go-back i {
         background: linear-gradient(45deg, rgba(128, 128, 128, 0.25) 0%, rgba(128, 128, 128, 0.15) 100%);
         background: -moz-linear-gradient(135deg, rgba(128, 128, 128, 0.25) 0%, rgba(128, 128, 128, 0.15) 100%);
         background: -webkit-linear-gradient(135deg, rgba(128, 128, 128, 0.25) 0%, rgba(128, 128, 128, 0.15) 100%);
+    }
+}
+
+@-webkit-keyframes darker-rainbow {
+    0%,
+    100% {
+        background: rgba(128, 128, 128, 0.75);
+        background: linear-gradient(45deg, rgba(128, 128, 128, 0.75) 0%, rgba(128, 128, 128, 0.65) 100%);
+        background: -moz-linear-gradient(135deg, rgba(128, 128, 128, 0.75) 0%, rgba(128, 128, 128, 0.65) 100%);
+        background: -webkit-linear-gradient(135deg, rgba(128, 128, 128, 0.75) 0%, rgba(128, 128, 128, 0.65) 100%);
+    }
+}
+
+@keyframes darker-rainbow {
+    0%,
+    100% {
+        background: rgba(128, 128, 128, 0.75);
+        background: linear-gradient(45deg, rgba(128, 128, 128, 0.75) 0%, rgba(128, 128, 128, 0.65) 100%);
+        background: -moz-linear-gradient(135deg, rgba(128, 128, 128, 0.75) 0%, rgba(128, 128, 128, 0.65) 100%);
+        background: -webkit-linear-gradient(135deg, rgba(128, 128, 128, 0.75) 0%, rgba(128, 128, 128, 0.65) 100%);
     }
 }
 
