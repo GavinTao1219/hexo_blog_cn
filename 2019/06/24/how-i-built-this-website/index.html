@@ -4,8 +4,10 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="华为, Gavin Tao">
-    <meta name="description" content="华为 | Gavin Tao">
+    <meta name="keywords" content="搭建此网站过程之小记, Gavin Tao">
+    <meta name="description" content="1. 安装Hexo话不多说，按照官网的指导，使用npm安装hexo
+npm install hexo-cli -g  ## 安装hexo命令行工具
+hexo init blog           ## 使用hexo初始化一个叫做blog的">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>华为 | Gavin Tao</title>
+    <title>搭建此网站过程之小记 | Gavin Tao</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -216,11 +218,20 @@
 
 
 
-    
 
-
-<div class="workexp-cover pd-header" style="background-image: url('/medias/company-featureimgs/huawei.jpg')"></div>
-
+<div class="bg-cover pd-header post-cover" style="background-image: url('/source/images/hexo.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        搭建此网站过程之小记
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
@@ -320,62 +331,221 @@
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
-            <div class="title center-align">
-                
-                    华为工作经历
-                
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Hexo/" target="_blank">
+                                <span class="chip bg-color">Hexo</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/开源软件-工具/" class="post-category" target="_blank">
+                                开源软件/工具
+                            </a>
+                        
+                    </div>
+                    
+                </div>
             </div>
-            <div class="row center-align">
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2019-06-24
+                </div>
+
                 
-                    <div class="col s12 m4 l4">
-                        <div class="description">
-                            软件开发 (物联网方面)
-                        </div>
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
+                        309
                     </div>
-                    <div class="col s12 m4 l4">
-                        <div class="description">
-                            2018年11月 - 2019年6月
-                        </div>
+                    
+
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                        1 分
                     </div>
-                    <div class="col s12 m4 l4">
-                        <div class="description">
-                            中国 - 深圳
-                        </div>
-                    </div>
+                    
                 
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
             </div>
         </div>
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>华为技术有限公司是一家中国的ICT（信息与通信）基础设施和智能终端提供商，我曾在华为的物联网部门下面的车联网项目群从事软件开发工作。主要负责华为车联网云平台的后端开发。</p>
-<p>我使用了Java及多种开源组件，负责华为车联网平台与南向车载设备之间交互业务的开发，实现了基于HTTP协议的Ecall消息上报、基于MQTT协议的车辆控制命令下发及响应上报、采集，保证了代码的单元测试覆盖率与功能稳定，并成功在欧洲上现网使用。</p>
-<h2 id="一、主要工作内容"><a href="#一、主要工作内容" class="headerlink" title="一、主要工作内容"></a>一、主要工作内容</h2><h3 id="1-基于HTTP的eCall消息上报"><a href="#1-基于HTTP的eCall消息上报" class="headerlink" title="1. 基于HTTP的eCall消息上报"></a>1. 基于HTTP的eCall消息上报</h3><p>eCall消息是欧盟倡议的，旨在为欧盟内任何地方发生碰撞的驾车者提供快速援助。</p>
-<ul>
-<li>接收车载设备发送的HTTP POST请求，并对POST请求体中的16进制码流进行解码，实现了将码流解码为包含具体车辆求救信息的JSON结构体。</li>
-<li>作为Kafka生产者，将解码的消息推送到消息队列，供华为车联网平台的其他微服务组件消费后写入数据库、打点记录，并进行具体的业务处理。Kafka消息队列的运用保证了高并发时的稳定性。</li>
-<li>使用xml文件与正则表达式，适配了动态url的POST请求，实现了从url中动态读取所需参数。</li>
-<li>符合OSGi规范，实现了此功能注册为OSGi的声明式服务，可作为插件（Karaf中的bundle）进行热插拔式的安装、卸载。</li>
-</ul>
-<h3 id="2-基于MQTT的车辆控制命令下发"><a href="#2-基于MQTT的车辆控制命令下发" class="headerlink" title="2. 基于MQTT的车辆控制命令下发"></a>2. 基于MQTT的车辆控制命令下发</h3><ul>
-<li>构建华为车联网平台与车载设备之间的MQTT协议通道，实现了华为车联网平台与车辆设备之间基于MQTT协议的双向通信，保证了糟糕网络环境下服务的稳定性。</li>
-<li>实现了短信唤醒车辆设备的特性，并通过订阅MQTT消息的topic，接收车辆被唤醒后主动上报的MQTT消息，并作为Kafka生产者推送给其他微服务组件。</li>
-<li>向其他微服务组件提供远程控制命令下发的API，调用该API即可通过MQTT通道向车辆设备发送多种不同的远程控制命令，实现了包括远程开关门锁、鸣笛、开关大灯、开关或调整空调、查询车辆具体信息等。</li>
-<li>实现了MQTT topic的订阅，监听车辆设备上报的控制命令响应，并作为Kafka生产者，将响应报文推送给其他微服务组件消费。</li>
-<li>实现了多节点的MQTT命令下发与响应，通过在MongoDB中注册路由信息，保证了同一命令与响应均由同一节点进行业务处理。</li>
-<li>符合OSGi规范，实现了此功能注册为OSGi的声明式服务，可作为插件（Karaf中的bundle）进行热插拔式的安装、卸载。</li>
-</ul>
-<h2 id="二、相关技术栈"><a href="#二、相关技术栈" class="headerlink" title="二、相关技术栈"></a>二、相关技术栈</h2><h3 id="1-OSGi-Apache-Karaf"><a href="#1-OSGi-Apache-Karaf" class="headerlink" title="1. OSGi + Apache Karaf"></a>1. OSGi + Apache Karaf</h3><p>以上所有功能开发均符合OSGi架构，各业务模块都作为声明式服务注册发布，并由Maven打包为单独jar包，可热插拔式地单独部署到Apache Karaf中，实现随时安装、运行、停止、卸载等。</p>
-<h3 id="2-Apache-Kafka"><a href="#2-Apache-Kafka" class="headerlink" title="2. Apache Kafka"></a>2. Apache Kafka</h3><p>华为车联网平台使用Kafka这种发布/订阅式的消息队列系统来处理各个微服务组件之间的通信问题。以上所有功能开发均使用了Apache Kafka，为其他微服务组件生产消息。</p>
-<h3 id="3-Kubernetes"><a href="#3-Kubernetes" class="headerlink" title="3. Kubernetes"></a>3. Kubernetes</h3><p>华为车联网平台使用了Kubernetes维护多个微服务，每个微服务都有多个节点的同时运行。日常开发工作中，我熟练掌握了Kubernetes的使用及常用命令，如节点的查找、重建等操作。</p>
-<h3 id="4-MQTT协议"><a href="#4-MQTT协议" class="headerlink" title="4. MQTT协议"></a>4. MQTT协议</h3><p>MQTT协议是一种广泛应用于物联网领域的基于TCP/IP的发布/订阅式通讯协议，上文中车辆控制命令的下发与响应就是通过不同的MQTT topic实现的不同业务功能的消息通信。</p>
-<br>
-<br>
-<br>
+                <h2 id="1-安装Hexo"><a href="#1-安装Hexo" class="headerlink" title="1. 安装Hexo"></a>1. 安装Hexo</h2><p>话不多说，按照<a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">官网</a>的指导，使用npm安装hexo</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-cli -g  <span class="token comment" spellcheck="true">## 安装hexo命令行工具</span>
+hexo init blog           <span class="token comment" spellcheck="true">## 使用hexo初始化一个叫做blog的路径</span>
+<span class="token function">cd</span> blog                  <span class="token comment" spellcheck="true">## cd进去</span>
+<span class="token function">npm</span> <span class="token function">install</span>              <span class="token comment" spellcheck="true">## 在此路径里安装hexo</span>
+hexo server              <span class="token comment" spellcheck="true">## 运行hexo</span></code></pre>
+<p>执行完这一步，hexo就安装完成了。</p>
+<h2 id="2-将Hexo部署到Github-Pages上"><a href="#2-将Hexo部署到Github-Pages上" class="headerlink" title="2. 将Hexo部署到Github Pages上"></a>2. 将Hexo部署到Github Pages上</h2><p>前往<a href="https://pages.github.com/" target="_blank" rel="noopener">Github Pages</a>主页，根据指引建立Github Pages所需的代码仓库。<br>然后在hexo建立的blog路径下，编辑_config.yml文件，配置自动部署。</p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token comment" spellcheck="true"># Deployment</span>
+<span class="token comment" spellcheck="true">## Docs: https://hexo.io/docs/deployment.html</span>
+<span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+  <span class="token key atrule">type</span><span class="token punctuation">:</span> git                                           <span class="token comment" spellcheck="true">## 自动部署使用的工具类型    </span>
+  <span class="token key atrule">repo</span><span class="token punctuation">:</span> git@github.com<span class="token punctuation">:</span>GavinTao1219/hexo_blog_cn.git  <span class="token comment" spellcheck="true">## git仓库的地址</span>
+  <span class="token key atrule">branch</span><span class="token punctuation">:</span> master                                      <span class="token comment" spellcheck="true">## git分支</span></code></pre>
+<p>设置完成后，保存_config.yml文件，然后运行如下代码进行部署</p>
+<pre class=" language-bash"><code class="language-bash">hexo clean <span class="token operator">&amp;&amp;</span> hexo generate
+hexo deploy</code></pre>
+<p>或简写为</p>
+<pre class=" language-bash"><code class="language-bash">hexo cl <span class="token operator">&amp;&amp;</span> hexo g
+hexo d</code></pre>
+<p>hexo是静态博客系统，<code>hexo generate</code>命令即是将代码生成为静态网页，然后<code>hexo deploy</code>则是将生成好的网页通过git部署到Github上。<br>如果有绑定自己域名的需求，则需要在blog/source路径下建立CNAME文件，里面填写自己的域名，比如我的中文版网站填写的就是</p>
+<pre><code>cn.gavintao.com</code></pre>
             </div>
 
-        </div>
 
+            
+                <hr>
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+
+            
+
+
+        </div>
     </div>
 
     
@@ -395,7 +565,7 @@
         repo: 'gavintao1219.github.io',
         owner: 'GavinTao1219',
         admin: "GavinTao1219",
-        id: '2019-06-08T00-18-08',
+        id: '2019-06-24T16-58-41',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -411,7 +581,114 @@
 
     
 
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2019/06/24/how-i-built-this-website/">
+                    <div class="card-image">
+                        
+                        <img src="/source/images/hexo.jpg" class="responsive-img" alt="搭建此网站过程之小记">
+                        
+                        <span class="card-title">搭建此网站过程之小记</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            此网站基于Hexo博客系统搭建，使用了Blinkfox大神的matery主题
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-24
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/开源软件-工具/" class="post-category" target="_blank">
+                                    开源软件/工具
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Hexo/" target="_blank">
+                        <span class="chip bg-color">Hexo</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/06/24/how-i-built-this-website/">
+                    <div class="card-image">
+                        
+                        <img src="/source/images/hexo.jpg" class="responsive-img" alt="搭建此网站过程之小记">
+                        
+                        <span class="card-title">搭建此网站过程之小记</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            此网站基于Hexo博客系统搭建，使用了Blinkfox大神的matery主题
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-24
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/开源软件-工具/" class="post-category" target="_blank">
+                                    开源软件/工具
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Hexo/" target="_blank">
+                        <span class="chip bg-color">Hexo</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
 </div>
+
+
+
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
         <div class="toc-widget">
@@ -436,7 +713,7 @@
         tocbot.init({
             tocSelector: '#toc-content',
             contentSelector: '#articleContent',
-            headingsOffset: -($(window).height() * 0.4 + 45),
+            headingsOffset: -($(window).height() * 0.4 - 45),
             // headingsOffset: -205,
             headingSelector: 'h2, h3, h4'
         });
@@ -455,7 +732,7 @@
         });
 
         // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 + 64);
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
         let $tocWidget = $('.toc-widget');
         $(window).scroll(function () {
             let scroll = $(window).scrollTop();
