@@ -367,7 +367,7 @@ hexo init blog           ## 使用hexo初始化一个叫做blog的">
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        309
+                        390
                     </div>
                     
 
@@ -411,7 +411,10 @@ hexo deploy</code></pre>
 <pre class=" language-bash"><code class="language-bash">hexo cl <span class="token operator">&amp;&amp;</span> hexo g
 hexo d</code></pre>
 <p>hexo是静态博客系统，<code>hexo generate</code>命令即是将代码生成为静态网页，然后<code>hexo deploy</code>则是将生成好的网页通过git部署到Github上。<br>如果有绑定自己域名的需求，则需要在blog/source路径下建立CNAME文件，里面填写自己的域名，比如我的中文版网站填写的就是</p>
-<pre><code>cn.gavintao.com</code></pre>
+<pre><code>cn.gavintao.com</code></pre><h2 id="3-替换hexo博客主题"><a href="#3-替换hexo博客主题" class="headerlink" title="3. 替换hexo博客主题"></a>3. 替换hexo博客主题</h2><p>在_config.yml中，将theme一栏替换为hexo-theme-matery</p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">theme</span><span class="token punctuation">:</span> hexo<span class="token punctuation">-</span>theme<span class="token punctuation">-</span>matery</code></pre>
+<h2 id="4-对主题进行魔改"><a href="#4-对主题进行魔改" class="headerlink" title="4. 对主题进行魔改"></a>4. 对主题进行魔改</h2><p>主题的对应源码主要在theme/hexo-theme=matery/layout中，其中使用了ejs模板文件来定义页面，其中我增加了展示教育经历、工作经历的代码。</p>
+
             </div>
 
 
@@ -796,7 +799,7 @@ hexo d</code></pre>
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;全站字数统计：&nbsp;
-                <span class="white-color">309</span>
+                <span class="white-color">390</span>
             
 
             
