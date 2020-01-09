@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cn.gavintao.com/"/>
-  <updated>2020-01-09T06:11:20.722Z</updated>
+  <updated>2020-01-09T07:30:00.790Z</updated>
   <id>https://cn.gavintao.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://cn.gavintao.com/2020/01/08/spring-boot-web-jie-gou/"/>
+    <id>https://cn.gavintao.com/2020/01/08/spring-boot-web-jie-gou/</id>
+    <published>2020-01-09T07:29:32.904Z</published>
+    <updated>2020-01-09T07:30:00.790Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;TEST&quot;&gt;&lt;a href=&quot;#TEST&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title></title>
