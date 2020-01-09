@@ -4,10 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Gavin Tao">
-    <meta name="description" content="Spring Boot学习笔记Spring Boot Web基本结构此处参考chapter3-springboot-web
+    <meta name="keywords" content="Spring Boot Web基本结构, Gavin Tao">
+    <meta name="description" content="Spring Boot Web基本结构此处参考chapter3-springboot-web
 MVC及SSM与三层架构的关系MVC: Model, View, Controller
-三层架构：View, Ser">
+三层架构：View, Service, Dao
+![img">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +16,7 @@ MVC及SSM与三层架构的关系MVC: Model, View, Controller
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Gavin Tao</title>
+    <title>Spring Boot Web基本结构 | Gavin Tao</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -219,13 +220,13 @@ MVC及SSM与三层架构的关系MVC: Model, View, Controller
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/post_images/blog.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        
+                        Spring Boot Web基本结构
                     </div>
                 </div>
             </div>
@@ -334,12 +335,25 @@ MVC及SSM与三层架构的关系MVC: Model, View, Controller
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Spring-Boot/" target="_blank">
+                                <span class="chip bg-color">Spring Boot</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/后端/" class="post-category" target="_blank">
+                                后端
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -354,7 +368,7 @@ MVC及SSM与三层架构的关系MVC: Model, View, Controller
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        134
+                        181
                     </div>
                     
 
@@ -377,15 +391,14 @@ MVC及SSM与三层架构的关系MVC: Model, View, Controller
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Spring-Boot学习笔记"><a href="#Spring-Boot学习笔记" class="headerlink" title="Spring Boot学习笔记"></a>Spring Boot学习笔记</h1><h3 id="Spring-Boot-Web基本结构"><a href="#Spring-Boot-Web基本结构" class="headerlink" title="Spring Boot Web基本结构"></a>Spring Boot Web基本结构</h3><p>此处参考chapter3-springboot-web</p>
+                <h3 id="Spring-Boot-Web基本结构"><a href="#Spring-Boot-Web基本结构" class="headerlink" title="Spring Boot Web基本结构"></a>Spring Boot Web基本结构</h3><p>此处参考<a href="https://github.com/JeffLi1993/springboot-learning-example" target="_blank" rel="noopener">chapter3-springboot-web</a></p>
 <h4 id="MVC及SSM与三层架构的关系"><a href="#MVC及SSM与三层架构的关系" class="headerlink" title="MVC及SSM与三层架构的关系"></a>MVC及SSM与三层架构的关系</h4><p>MVC: Model, View, Controller</p>
 <p>三层架构：View, Service, Dao</p>
-<p><img src="https://user-gold-cdn.xitu.io/2017/5/27/f83c67b0a07a9e96230a42c91879d8e1?imageslim" alt="img"></p>
-<p>下图展现了SSM（SpringMVC、Spring、MyBatis）中的三层架构<img src="https://user-gold-cdn.xitu.io/2017/5/27/6795acbfc2ca254b6bc069c2b80a7f8b?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="img"></p>
+<p>![img](/home/gavintao/Documents/Spring Boot学习笔记/Spring Boot Web结构/f83c67b0a07a9e96230a42c91879d8e1?imageslim)</p>
+<p>下图展现了SSM（SpringMVC、Spring、MyBatis）中的三层架构![img](/home/gavintao/Documents/Spring Boot学习笔记/Spring Boot Web结构/1)</p>
 <h4 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h4><p>就目前所学，在Spring Boot项目中，文件层次如下：</p>
-<p><img src="/home/gavintao/.config/Typora/typora-user-images/image-20200108210105673.png" alt="image-20200108210105673"></p>
+<p>![image-20200108210105673](/home/gavintao/Documents/Spring Boot学习笔记/Spring Boot Web结构/image-20200108210105673.png)</p>
 <p>如图，domain为Dao层，定义了数据实体；service为service层，其中包含interface和相应的impl，接口定义了对dao的具体操作；web为view层，包含controller，其中定义了request mapping，service作为类变量注入到controller之中。</p>
-<p>### </p>
 
             </div>
 
@@ -773,7 +786,7 @@ TEST
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;全站字数统计：&nbsp;
-                <span class="white-color">682</span>
+                <span class="white-color">729</span>
             
 
             
